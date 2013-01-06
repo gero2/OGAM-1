@@ -39,7 +39,7 @@ public class SimpleFont {
         font.loadGlyphs();
     }
     
-    public UnicodeFont get() {
-        return font;
+    public void drawString(float x, float y, String text) {
+    	font.drawString(x, y, text);
     }
 }

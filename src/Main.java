@@ -50,6 +50,7 @@ public class Main extends BasicGame {
 	public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
 		graphics.setAntiAlias(true);
 		renderer.update(graphics);
+		font.drawString(300, 200, "Meow, World!");
 	}
 
 	public static void main(String[] args) {
