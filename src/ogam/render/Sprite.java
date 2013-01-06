@@ -1,4 +1,4 @@
-package ogam.renderer;
+package ogam.render;
 
 import org.newdawn.slick.Graphics;
 

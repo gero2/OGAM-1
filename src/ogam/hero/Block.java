@@ -1,9 +1,9 @@
-package ogam.heroes;
+package ogam.hero;
 
 import ogam.geometry.Vector2D;
-import ogam.heroes.visual.BlockSprite;
-import ogam.renderer.Sprite;
-import ogam.renderer.Renderable;
+import ogam.hero.visual.BlockSprite;
+import ogam.render.Renderable;
+import ogam.render.Sprite;
 
 public class Block implements Renderable {
 	private Vector2D position;
@@ -16,7 +16,7 @@ public class Block implements Renderable {
 	private static float jumpStrength = 100f; 
 
 	public Block(Vector2D position, float width, float height) {
-		this.velocity = Vector2D.ZERO;
+		this.velocity = new Vector2D(100, 100);
 		this.position = position;
 		this.width = width;
 		this.height = height;

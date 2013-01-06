@@ -1,4 +1,4 @@
-package ogam.renderer;
+package ogam.render;
 
 import java.util.ArrayList;
 import java.util.List;

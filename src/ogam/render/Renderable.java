@@ -1,4 +1,4 @@
-package ogam.renderer;
+package ogam.render;
 
 /*
  * All objects that want to be drawn (such as heroes or scenery) implement the Renderable interface.

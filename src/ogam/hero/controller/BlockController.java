@@ -1,4 +1,4 @@
-package ogam.heroes.controllers;
+package ogam.hero.controller;
 
 
 public class BlockController implements HeroController {

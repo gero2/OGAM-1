@@ -1,8 +1,8 @@
 import java.awt.Font;
 
 import ogam.geometry.Vector2D;
-import ogam.heroes.Block;
-import ogam.renderer.Renderer;
+import ogam.hero.Block;
+import ogam.render.Renderer;
 import ogam.util.SimpleFont;
 
 import org.newdawn.slick.AppGameContainer;

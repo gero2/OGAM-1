@@ -1,9 +1,9 @@
-package ogam.heroes.visual;
+package ogam.hero.visual;
 
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Polygon;
 
-import ogam.renderer.Sprite;
+import ogam.render.Sprite;
 
 public class BlockSprite implements Sprite {
 	Polygon sprite = new Polygon();
