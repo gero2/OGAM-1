@@ -3,12 +3,12 @@ package ogam.heroes.renderdata;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Polygon;
 
-import ogam.renderer.RenderData;
+import ogam.renderer.Sprite;
 
-public class BlockRenderData implements RenderData {
+public class BlockSprite implements Sprite {
 	Polygon sprite = new Polygon();
 	
-	public BlockRenderData(float width, float height) {
+	public BlockSprite(float width, float height) {
 		sprite.addPoint(0, 0);
 		sprite.addPoint(width - 1, 0);
 		sprite.addPoint(width - 1, height - 1);

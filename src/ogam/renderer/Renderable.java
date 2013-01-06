@@ -1,12 +1,12 @@
 package ogam.renderer;
 
 /*
- * All objects (such as heroes or scenery) that want to be drawn implement the Renderable interface.
- * The Renderer simply calls the RenderData's draw() method at its current position.
+ * All objects that want to be drawn (such as heroes or scenery) implement the Renderable interface.
+ * The Renderer simply calls the Sprite's draw() method.
  */
 
 public interface Renderable {
-	public RenderData getRenderData();
+	public Sprite getSprite();
 	public float getX();
 	public float getY();
 }

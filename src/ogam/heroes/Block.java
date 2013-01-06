@@ -2,7 +2,7 @@ package ogam.heroes;
 
 import ogam.geometry.Vector2D;
 import ogam.heroes.renderdata.BlockRenderData;
-import ogam.renderer.RenderData;
+import ogam.renderer.Sprite;
 import ogam.renderer.Renderable;
 
 public class Block implements Renderable {
@@ -12,7 +12,7 @@ public class Block implements Renderable {
 	private float width;
 	private float height;
 	
-	private RenderData renderData;
+	private Sprite sprite;
 	private static float jumpStrength = 100f; 
 
 	public Block(Vector2D position, float width, float height) {
@@ -54,7 +54,7 @@ public class Block implements Renderable {
 	}
 
 	@Override
-	public RenderData getRenderData() {
+	public Sprite getRenderData() {
 		return renderData;
 	}
 

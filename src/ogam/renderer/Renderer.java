@@ -22,8 +22,8 @@ public class Renderer {
 		}
 	}
 	
-	public void draw(Renderable r, Graphics g) {
-		RenderData renderData = r.getRenderData();
-		renderData.draw(g, r.getX(), r.getY());
+	private void draw(Renderable r, Graphics g) {
+		Sprite sprite = r.getSprite();
+		sprite.draw(g, r.getX(), r.getY());
 	}
 }
