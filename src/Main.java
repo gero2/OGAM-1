@@ -9,20 +9,11 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
 public class Main extends BasicGame {
-	private static final String TITLE = "PhysiKs";
-	
-	private SimpleFont font;
-	
+	private static final String TITLE = "OGAM1";
 	public static final int WIDTH = 800;
 	public static final int HEIGHT = 600;
-	public static Mode MODE = Mode.Normal;
 	
-	public static int testId = 999;
-	public static boolean testDebug = true;
-
-	public enum Mode {
-		Normal, Frame, Step
-	}
+	private SimpleFont font;
 	
 	public Main(String title) {
 		super(title);
