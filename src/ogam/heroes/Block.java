@@ -1,7 +1,7 @@
 package ogam.heroes;
 
 import ogam.geometry.Vector2D;
-import ogam.heroes.renderdata.BlockRenderData;
+import ogam.heroes.visual.BlockSprite;
 import ogam.renderer.Sprite;
 import ogam.renderer.Renderable;
 
@@ -21,7 +21,7 @@ public class Block implements Renderable {
 		this.width = width;
 		this.height = height;
 		
-		renderData = new BlockRenderData(this.width, this.height);
+		sprite = new BlockSprite(this.width, this.height);
 	}
 	
 	public void update(float deltaTime) {
@@ -54,8 +54,8 @@ public class Block implements Renderable {
 	}
 
 	@Override
-	public Sprite getRenderData() {
-		return renderData;
+	public Sprite getSprite() {
+		return sprite;
 	}
 
 	@Override
