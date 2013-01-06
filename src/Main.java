@@ -1,5 +1,8 @@
 import java.awt.Font;
 
+import ogam.geometry.Vector2D;
+import ogam.heroes.Block;
+import ogam.renderer.Renderer;
 import ogam.util.SimpleFont;
 
 import org.newdawn.slick.AppGameContainer;
@@ -15,12 +18,20 @@ public class Main extends BasicGame {
 	
 	private SimpleFont font;
 	
+	Renderer renderer = new Renderer();
+	
+	Block testBlock = new Block(new Vector2D(400, 300), 50f, 50f);
+	
 	public Main(String title) {
 		super(title);
 	}
 
 	public void init(GameContainer gc) throws SlickException {
 		initFont();
+		
+		Block b = new Block(new Vector2D(0, 0), 10, 10);
+		
+		renderer.add(testBlock);
 	}
 	
 	private void initFont() {
@@ -33,10 +44,12 @@ public class Main extends BasicGame {
 	}
 
 	public void update(GameContainer gameContainer, int delta) throws SlickException {
+		testBlock.update((float)delta / 1000);
 	}
 
 	public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
 		graphics.setAntiAlias(true);
+		renderer.update(graphics);
 	}
 
 	public static void main(String[] args) {
