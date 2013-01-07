@@ -1,9 +1,9 @@
 package ogam.hero;
 
 import ogam.geometry.Vector2D;
-import ogam.hero.visual.BlockSprite;
 import ogam.render.Renderable;
 import ogam.render.Sprite;
+import ogam.render.SpriteAnimator;
 
 public class Block implements Renderable {
 	private Vector2D position;
@@ -12,7 +12,7 @@ public class Block implements Renderable {
 	private float width;
 	private float height;
 	
-	private Sprite sprite;
+	private SpriteAnimator animator;
 	private static float jumpStrength = 100f; 
 
 	public Block(Vector2D position, float width, float height) {
@@ -20,13 +20,14 @@ public class Block implements Renderable {
 		this.position = position;
 		this.width = width;
 		this.height = height;
-		
-		sprite = new BlockSprite(this.width, this.height);
+
+		animator = new SpriteAnimator(this.width, this.height);
 	}
 	
 	public void update(float deltaTime) {
 		position = position.add(velocity.mult(deltaTime));
-	}	
+		animator.update(deltaTime);
+	}
 	
 	public Vector2D getPosition() {
 		return position;
@@ -55,7 +56,7 @@ public class Block implements Renderable {
 
 	@Override
 	public Sprite getSprite() {
-		return sprite;
+		return animator.getFrame();
 	}
 
 	@Override
